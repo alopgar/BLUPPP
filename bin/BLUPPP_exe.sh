@@ -45,7 +45,7 @@ JOINORSEP(){
 		cut -f2- -d ' ' $1 > snps.tmp
 		snps_len_sp=$( awk '{print length}' snps.tmp | sort -nrk1,1 | head -1)
 		snps_len=$(( ( $snps_len_sp / 2 ) + 1 ))
-		#filtertest.f90 input file:
+		#joinorsep.f90 input file:
 		paste -d ' ' ids.tmp snps.tmp > $modnamenm$3
 		rm ids.tmp snps.tmp
 	elif [ "$2" = 'separate' ]; then
@@ -59,7 +59,7 @@ JOINORSEP(){
 		"OPERATION: '$2'" \
 		"LENGTH_IDS: $ids_len" \
 		"NUMBER_SNPS: $snps_len" > $WDIR/filter_param.txt
-	gfortran $BINPATH/filtertest.f90 -o $BINPATH/out_filter.x
+	gfortran $BINPATH/joinorsep.f90 -o $BINPATH/out_filter.x
 	$BINPATH/out_filter.x $WDIR/filter_param.txt
 	rm $modnamenm$3 $WDIR/filter_param.txt
 }
