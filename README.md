@@ -1,4 +1,4 @@
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![GPLv3 License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/)
 [![Last version](https://img.shields.io/github/tag/alopgar/BLUPPP.svg)](https://img.shields.io/github/tag/alopgar/BLUPPP.svg)
 
 # BLUPPP
