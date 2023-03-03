@@ -1,0 +1,42 @@
+#########################################################################################
+##### 								BLUPPP parameter file							#####
+#########################################################################################
+
+## WORKING DIRECTORY:
+WDIR=
+
+## DIRECTORY FOR BLUPF90 PREPARATION:
+# If specified, phenotypes, relationships and processed genotypes will be relocated inside (genotypes will be symlinked).
+BF90D=BLUPF90
+
+## LOCATION AND NAME OF FILES (genotypes, phenotypes, relationships and SNP .map):
+# Note: smap will only be necessary if '-l' flag (plink filter) is used.
+genotypes=
+phenot=
+parent=
+smap=
+
+## PROCESSING OPTIONS: These options will only work if '-p' flag is used.
+# appendg: If specified, add new genotypes to the previous file. Otherwise, leave blank.
+# headers: How do you want to treat headers in your genotypes file? values -> 0=absent; 1=present,remove; 2=present,keep.
+# duplicates: Are there duplicated samples to process? y/n.
+# NAto5: Do you want to convert NAs/-1 to numeric value (5)? y/n.
+# modif: Values: 'join' (all number-coded SNPs all together) or 'separate' (number-coded SNPs separated by spaces). Leave blank if not required.
+appendg=
+headers=
+duplicates=
+NAto5=
+modif=
+
+## EXTRA PROCESSING FUNCTION: This function will only work with '-p' flag.
+# Sometimes, extra processing might be needed for some genotypes files. Here, a custom function can be created for applying it before joining or separating.
+# If this function is not necessary, remove it.
+# The function will be passed as: EXTRA_PROC "$gname.tmp". Function's output file must be $gname.tmp as well. So, input and output files inside the function 
+# must be referred as $1. Note: $gname.tmp is a temporary file created from $genotypes at the beginning (or after adding new genotypes if specified). 
+EXTRA_PROC(){
+	#Example: Remove an extra non-SNP column:
+  cut -d ' ' -f1 $1 > ids.tmp
+	cut -f3- -d ' ' $1 > snps.tmp
+	paste -d ' ' ids.tmp snps.tmp > $1
+	rm ids.tmp snps.tmp
+}
