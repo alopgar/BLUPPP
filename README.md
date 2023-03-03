@@ -15,9 +15,10 @@ For the correct functioning of this scripts, the installation of several softwar
 
 ## 1. Installation:
 a) Download all the ./bin files in your installation directory.  
-b) Change `BINPATH` variable inside BLUPPP_exe.sh to your BLUPPP installation directory.
+b) Add your installation directory to your `PATH` variable in `~/.bashrc` file.  
+c) Change `BINPATH` variable inside BLUPPP_exe.sh to point your BLUPPP installation directory.
 
 ## 2. Pipeline execution:
 a) Use `BLUPPP_exe.sh -h` for more information.  
 b) Download the parameter file model (`BLUPPP_parameters.par`) and fill variables.  
-c) Run as: `BLUPPP_exe.sh -i path/to/parameterfile.par [additional options]`
+c) Run as: `BLUPPP_exe.sh -i path/to/BLUPPP_parameters.par [additional options]`
