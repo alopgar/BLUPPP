@@ -38,7 +38,8 @@ c) Change `BINPATH` variable inside BLUPPP_exe.sh to point your BLUPPP installat
 a) Use `BLUPPP_exe.sh -h` for more information.  
 b) Download the parameter file model (`BLUPPP_parameters.par`) and fill variables.  
 c) Run as: `BLUPPP_exe.sh -i path/to/BLUPPP_parameters.par [additional options]`
+  
 
 ## In development:
 1) *Check R code compatibility with last R version (v4.2.2)*.  
-2) *Accesibility improvements*.
+2) *Accessibility improvements*.
