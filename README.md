@@ -4,7 +4,7 @@
 # BLUPPP
 Pipeline that prepares genotypes files for BLUPF90
 
-## 0. SOFTWARE REQUIREMENTS:
+## 0. Software requirements:
 For the correct functioning of this scripts, the installation of several software is required:
 - **gfortran-9**: https://fortran-lang.org/en/learn/os_setup/install_gfortran/
 - **PLINK 1.9**: https://www.cog-genomics.org/plink/
@@ -13,13 +13,11 @@ For the correct functioning of this scripts, the installation of several softwar
 ### R dependencies:
 - **tidyverse**: `install.packages("tidyverse")`
 
-
 ## 1. Installation:
-a) Download all the ./bin files in your installation directory.
+a) Download all the ./bin files in your installation directory.  
 b) Change `BINPATH` variable inside BLUPPP_exe.sh to your BLUPPP installation directory.
 
-
-## 2. Script execution:
+## 2. Pipeline execution:
 a) Use `BLUPPP_exe.sh -h` for more information.  
-c) `BLUPPP_exe.sh -i Documents/Lubina_pdp_2023/BLUPPP_lubina.par -p custom
-
+b) Download the parameter file model (`BLUPPP_parameters.par`) and fill variables.  
+c) Run as: `BLUPPP_exe.sh -i path/to/parameterfile.par [additional options]`
