@@ -15,9 +15,9 @@ If 2 copies of an animal ID are detected, BLUPPP will combine their SNP informat
 An additional script with plink processing (`plink_filt.sh`) is included in BLUPPP, which can be modified according to the user's preferences.
 #### 5) Conversion of SNP file to BLUPF90/ASRGenomics formats:
 This step includes:
-a) The removal/keeping of headers (i.e., SNP names or codes).
-b) The mutation of NA codes to 5.
-c) The collapse or spaced separation of SNP values.
+a) The removal/keeping of headers (i.e., SNP names or codes).  
+b) The mutation of NA codes to 5.  
+c) The collapse or spaced separation of SNP values.  
 Following the requirements of BLUPF90/ASRGenomics, respectively.
 
 ## 0. Software requirements:
