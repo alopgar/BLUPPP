@@ -27,7 +27,10 @@ For the correct functioning of this scripts, the installation of several softwar
 - **R 4.1.3**: https://cran.r-project.org/bin/windows/base/old/4.1.3/
 
 ### R dependencies:
-- **tidyverse**: `install.packages("tidyverse")`
+- **dplyr**: `install.packages("dplyr")`  
+- **tidyr**: `install.packages("tidyr")`  
+- **stringr**: `install.packages("stringr")`  
+- **data.table**: `install.packages("data.table")`
 
 ## 1. Installation:
 a) Download all the ./bin files in your installation directory.  
